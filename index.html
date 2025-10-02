@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asistente Inmobiliario IA</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  header {
+    background: #003366;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.2em;
+  }
+  header p {
+    margin-top: 10px;
+    font-size: 1.1em;
+  }
+  section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .cta {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .cta a {
+    background: #0073e6;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .form-container {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 30px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  .form-group textarea {
+    resize: vertical;
+  }
+  button[type="submit"] {
+    background: #0073e6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  .embed {
+    margin: 30px 0;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.7em;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Asistente Inmobiliario IA</h1>
+  <p>Encuentra tu piso ideal en minutos gracias a la inteligencia artificial</p>
+</header>
+<section>
+  <h2>¿Qué es este asistente?</h2>
+  <p>Nuestro asistente inmobiliario utiliza inteligencia artificial para responder preguntas sobre precios de alquiler, barrios recomendados y comparaciones de compra vs alquiler. Además, puede ponerle en contacto con agencias inmobiliarias de confianza.</p>
+
+  <div class="cta">
+    <a href="#gpt">Probar el asistente ahora</a>
+  </div>
+
+  <div class="embed" id="gpt">
+    <!-- Reemplaza el siguiente iframe con el enlace a tu GPT personalizado si lo tienes -->
+    <iframe src="https://chatgpt.com/g/g-61MfaRZB-global-apartment-finder-ai-powered" width="100%" height="450" frameborder="0" style="border:1px solid #ccc;border-radius:5px;"></iframe>
+  </div>
+
+  <h2>¿Quieres recibir ofertas y ayuda personalizada?</h2>
+  <p>Déjanos tus datos y una agencia inmobiliaria se pondrá en contacto contigo con opciones ajustadas a tu presupuesto.</p>
+  <div class="form-container">
+    <form method="post" action="https://formsubmit.co/antonrodriguez67@yahoo.es">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="presupuesto">Presupuesto mensual (€)</label>
+        <input type="number" id="presupuesto" name="presupuesto" min="0" step="50" required>
+      </div>
+      <div class="form-group">
+        <label for="mensaje">Ciudad o barrio de interés</label>
+        <textarea id="mensaje" name="mensaje" rows="3" placeholder="Ej. Madrid, Barcelona, Lyon" required></textarea>
+      </div>
+      <button type="submit">Enviar datos</button>
+    </form>
+  </div>
+</section>
+<footer style="background:#003366;color:white;text-align:center;padding:20px;">
+  <p>&copy; 2025 Alendris Hernández • Asistente Inmobiliario IA</p>
+</footer>
+</body>
+</html>
