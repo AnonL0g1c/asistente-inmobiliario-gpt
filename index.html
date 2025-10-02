@@ -15,112 +15,166 @@
 <title>Asistente Inmobiliario IA</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #0a1f44;
-    color: #fff;
-    line-height: 1.6;
-  }
-  header {
-    background: linear-gradient(90deg, #031b34 0%, #062e58 100%);
-    padding: 80px 20px;
-    text-align: center;
-  }
-  header h1 {
-    font-size: 2.5em;
-    margin: 0;
-  }
-  header p {
-    font-size: 1.2em;
-    margin: 20px 0;
-    color: #d0d0d0;
-  }
-  .btn-primary {
-    background-color: #1fbf73;
-    color: #fff;
-    padding: 14px 28px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    margin: 10px;
-    transition: background 0.3s;
-  }
-  .btn-primary:hover {
-    background-color: #0e8f50;
-  }
-  .btn-secondary {
-    background-color: #253d6b;
-    color: #fff;
-    padding: 14px 28px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    margin: 10px;
-    transition: background 0.3s;
-  }
-  .btn-secondary:hover {
-    background-color: #1a2e53;
-  }
-  section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
-  }
-  section h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-  }
-  section p {
-    color: #d0d0d0;
-    margin-bottom: 30px;
-  }
-  .form-container {
-    background-color: #102a57;
-    padding: 30px;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  }
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #c8c8c8;
-  }
-  .form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    margin-bottom: 15px;
-  }
-  .form-group input[type="number"]::-webkit-outer-spin-button,
-  .form-group input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  button[type="submit"] {
-    background-color: #1fbf73;
-    color: #fff;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  button[type="submit"]:hover {
-    background-color: #0e8f50;
-  }
-  footer {
-    background-color: #031b34;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-  }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a1f44;
+  color: #fff;
+  line-height: 1.6;
+}
+header {
+  background: linear-gradient(90deg, #031b34 0%, #062e58 100%);
+  padding: 80px 20px;
+  text-align: center;
+}
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+header p {
+  font-size: 1.2em;
+  margin: 20px 0;
+  color: #d0d0d0;
+}
+.btn-primary {
+  background-color: #1fbf73;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin: 10px;
+  transition: background 0.3s;
+}
+.btn-primary:hover {
+  background-color: #0e8f50;
+}
+.btn-secondary {
+  background-color: #253d6b;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin: 10px;
+  transition: background 0.3s;
+}
+.btn-secondary:hover {
+  background-color: #1a2e53;
+}
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+section h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+section p {
+  color: #d0d0d0;
+  margin-bottom: 30px;
+}
+.form-container {
+  background-color: #102a57;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #c8c8c8;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.form-group input[type="number"]::-webkit-outer-spin-button,
+.form-group input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button[type="submit"] {
+  background-color: #1fbf73;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button[type="submit"]:hover {
+  background-color: #0e8f50;
+}
+footer {
+  background-color: #031b34;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+/* Testimonials section */
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.testimonials blockquote {
+  background-color: #102a57;
+  border-left: 4px solid #1fbf73;
+  padding: 20px;
+  border-radius: 6px;
+  max-width: 280px;
+  color: #d0d0d0;
+  font-style: italic;
+}
+.testimonials blockquote footer {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #1fbf73;
+}
+/* FAQ section */
+#faq details {
+  background-color: #102a57;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#faq summary {
+  font-weight: 600;
+  color: #1fbf73;
+  outline: none;
+}
+#faq p {
+  margin-top: 10px;
+  color: #d0d0d0;
+}
+/* Blog section */
+.blog-list {
+  list-style: none;
+  padding: 0;
+}
+.blog-list li {
+  margin-bottom: 10px;
+}
+.blog-list a {
+  color: #1fbf73;
+  text-decoration: none;
+}
+.blog-list a:hover {
+  text-decoration: underline;
+}
 </style>
 </head>
 <body>
@@ -158,6 +212,47 @@
       <button type="submit">Enviar datos</button>
     </form>
   </div>
+</section>
+<section id="testimonios">
+  <h2>Testimonios</h2>
+  <div class="testimonials">
+    <blockquote>
+      <p>"Encontré un piso en Barcelona en menos de una semana. El asistente me ahorró horas de búsqueda."</p>
+      <footer>— Laura, Barcelona</footer>
+    </blockquote>
+    <blockquote>
+      <p>"Gracias a la IA, supe qué barrios eran seguros para mi familia y ajustados a nuestro presupuesto."</p>
+      <footer>— Miguel, Valencia</footer>
+    </blockquote>
+    <blockquote>
+      <p>"Muy práctico y directo. Recibí contacto de varias agencias de confianza en poco tiempo."</p>
+      <footer>— Sophie, Lyon</footer>
+    </blockquote>
+  </div>
+</section>
+<section id="faq">
+  <h2>Preguntas Frecuentes</h2>
+  <details>
+    <summary>¿Cómo obtienen los datos de alquileres?</summary>
+    <p>Usamos fuentes públicas y colaboramos con agencias para ofrecer información actualizada y precisa.</p>
+  </details>
+  <details>
+    <summary>¿Tiene algún coste usar el asistente?</summary>
+    <p>Consultar precios y barrios es gratuito. Solo pagas si contratas servicios de agencias recomendadas.</p>
+  </details>
+  <details>
+    <summary>¿Puedo solicitar pisos en ciudades fuera de España y Francia?</summary>
+    <p>De momento nuestro asistente está optimizado para España y Francia, pero pronto añadiremos más países.</p>
+  </details>
+</section>
+<section id="blog">
+  <h2>Últimos artículos del blog</h2>
+  <ul class="blog-list">
+    <li><a href="#" title="Precios de alquiler en Madrid 2025">Precios de alquiler en Madrid 2025</a></li>
+    <li><a href="#" title="Guía de barrios seguros en Barcelona">Guía de barrios seguros en Barcelona</a></li>
+    <li><a href="#" title="Consejos para negociar tu alquiler">Consejos para negociar tu alquiler</a></li>
+  </ul>
+  <p><a href="#" class="btn-secondary">Ver más artículos</a></p>
 </section>
 <footer>
   &copy; 2025 Alendris Hernández • Asistente Inmobiliario IA
