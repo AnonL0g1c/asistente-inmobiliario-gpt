@@ -3,259 +3,316 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- SEO meta tags -->
-<meta name="description" content="Asistente inmobiliario con inteligencia artificial para encontrar pisos en alquiler en España y Francia. Consulta precios de alquiler, descubre barrios recomendados y contacta con agencias inmobiliarias de confianza.">
-<meta name="keywords" content="asistente inmobiliario, alquiler pisos, precios alquiler, barrios seguros, vivienda, GPT, IA, inmobiliaria">
-<meta name="robots" content="index,follow">
-<!-- Open Graph tags for social sharing -->
-<meta property="og:title" content="Asistente Inmobiliario IA">
-<meta property="og:description" content="Encuentra tu piso ideal en minutos con ayuda de la inteligencia artificial. Descubre precios de alquiler, zonas recomendadas y contacta con agencias profesionales.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://anonl0g1c.github.io/asistente-inmobiliario-gpt/">
+  <!-- SEO meta tags -->
+  <meta name="description" content="Asistente inmobiliario con inteligencia artificial para encontrar pisos en alquiler en España y Francia. Consulta precios de alquiler, descubre barrios recomendados y contacta con agencias inmobiliarias de confianza.">
+  <meta name="keywords" content="asistente inmobiliario, alquiler pisos, precios alquiler, barrios seguros, vivienda, GPT, IA, inmobiliaria">
+  <meta name="robots" content="index,follow">
+  <!-- Open Graph tags for social sharing -->
+  <meta property="og:title" content="Asistente Inmobiliario IA">
+  <meta property="og:description" content="Encuentra tu piso ideal en minutos con ayuda de la inteligencia artificial. Descubre precios de alquiler, zonas recomendadas y contacta con agencias profesionales.">
+  <meta property="og:type" content="website">
+  <!-- Actual URL will be set when deployed; this is a placeholder -->
+  <meta property="og:url" content="https://anonl0g1c.github.io/asistente-inmobiliario-gpt/">
 <title>Asistente Inmobiliario IA</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #0a1f44;
-  color: #fff;
-  line-height: 1.6;
-}
-header {
-  background: linear-gradient(90deg, #031b34 0%, #062e58 100%);
-  padding: 80px 20px;
-  text-align: center;
-}
-header h1 {
-  font-size: 2.5em;
-  margin: 0;
-}
-header p {
-  font-size: 1.2em;
-  margin: 20px 0;
-  color: #d0d0d0;
-}
-.btn-primary {
-  background-color: #1fbf73;
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  margin: 10px;
-  transition: background 0.3s;
-}
-.btn-primary:hover {
-  background-color: #0e8f50;
-}
-.btn-secondary {
-  background-color: #253d6b;
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  margin: 10px;
-  transition: background 0.3s;
-}
-.btn-secondary:hover {
-  background-color: #1a2e53;
-}
-section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-section h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-}
-section p {
-  color: #d0d0d0;
-  margin-bottom: 30px;
-}
-.form-container {
-  background-color: #102a57;
-  padding: 30px;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: #c8c8c8;
-}
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  margin-bottom: 15px;
-}
-.form-group input[type="number"]::-webkit-outer-spin-button,
-.form-group input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-button[type="submit"] {
-  background-color: #1fbf73;
-  color: #fff;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 4px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-button[type="submit"]:hover {
-  background-color: #0e8f50;
-}
-footer {
-  background-color: #031b34;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-}
-/* Testimonials section */
-.testimonials {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-.testimonials blockquote {
-  background-color: #102a57;
-  border-left: 4px solid #1fbf73;
-  padding: 20px;
-  border-radius: 6px;
-  max-width: 280px;
-  color: #d0d0d0;
-  font-style: italic;
-}
-.testimonials blockquote footer {
-  margin-top: 10px;
-  font-weight: 600;
-  color: #1fbf73;
-}
-/* FAQ section */
-#faq details {
-  background-color: #102a57;
-  margin-bottom: 10px;
-  padding: 15px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-#faq summary {
-  font-weight: 600;
-  color: #1fbf73;
-  outline: none;
-}
-#faq p {
-  margin-top: 10px;
-  color: #d0d0d0;
-}
-/* Blog section */
-.blog-list {
-  list-style: none;
-  padding: 0;
-}
-.blog-list li {
-  margin-bottom: 10px;
-}
-.blog-list a {
-  color: #1fbf73;
-  text-decoration: none;
-}
-.blog-list a:hover {
-  text-decoration: underline;
-}
+  /* Import Google Font for modern typography */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+  :root {
+    --primary-bg: #0a1f44;
+    --secondary-bg: #031b34;
+    --accent: #1fbf73;
+    --accent-dark: #16a15e;
+    --text-light: #f5f5f5;
+    --text-muted: #b0bcd0;
+  }
+  body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(90deg, #031b34 0%, #062e58 100%);
+    padding: 80px 20px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.4em;
+    font-weight: 600;
+  }
+  header p {
+    margin-top: 12px;
+    font-size: 1.2em;
+    color: var(--text-muted);
+  }
+  /* Buttons */
+  .btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--primary-bg);
+  }
+  .btn-primary:hover {
+    background: var(--accent-dark);
+  }
+  .btn-secondary {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+  }
+  .btn-secondary:hover {
+    background: var(--accent);
+    color: var(--primary-bg);
+  }
+  section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: var(--text-light);
+  }
+  section p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+  .hero-buttons {
+    margin-top: 30px;
+  }
+  /* Testimonials */
+  .testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .testimonial-card {
+    background: var(--secondary-bg);
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 calc(33% - 20px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    min-width: 260px;
+  }
+  .testimonial-card p {
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  .testimonial-card span {
+    font-weight: bold;
+    color: var(--accent);
+  }
+  /* FAQ */
+  .faq-item {
+    background: var(--secondary-bg);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  .faq-item summary {
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    background: var(--secondary-bg);
+    color: var(--accent);
+  }
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-item div {
+    padding: 0 15px 15px 15px;
+    color: var(--text-light);
+  }
+  /* Blog list */
+  .blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .blog-item {
+    background: var(--secondary-bg);
+    padding: 15px 20px;
+    border-radius: 8px;
+  }
+  .blog-item a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .blog-item a:hover {
+    text-decoration: underline;
+  }
+  /* Form */
+  .form-container {
+    background: var(--secondary-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #022047;
+    color: var(--text-light);
+  }
+  .form-group textarea {
+    resize: vertical;
+  }
+  .form-submit {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .form-submit button {
+    background: var(--accent);
+    color: var(--primary-bg);
+    padding: 14px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  .form-submit button:hover {
+    background: var(--accent-dark);
+  }
+  footer {
+    background: #020f2b;
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--text-muted);
+  }
+  @media (max-width: 768px) {
+    .testimonials {
+      flex-direction: column;
+    }
+  }
 </style>
 </head>
 <body>
-<header>
-  <h1>Encuentra Tu Piso Ideal</h1>
-  <p>El asistente inmobiliario IA que te guía a la vivienda perfecta en España y Francia.</p>
-  <a href="https://chatgpt.com/g/g-61MfaRZB-global-apartment-finder-ai-powered" class="btn-primary" target="_blank" rel="noopener">Probar Asistente</a>
-  <a href="#form" class="btn-secondary">Contacto</a>
-</header>
-<section>
-  <h2>¿Cómo funciona?</h2>
-  <p>Nuestro asistente IA responde a tus preguntas sobre precios de alquiler, barrios recomendados y opciones de inversión. Luego captura tus datos para conectar con agencias de confianza.</p>
-</section>
-<section id="form">
-  <h2>Recibe Ofertas Personalizadas</h2>
-  <p>¿Estás buscando piso? Déjanos tus datos y te contactaremos con las mejores opciones según tu presupuesto.</p>
-  <div class="form-container">
-    <form method="post" action="https://formsubmit.co/antonrodriguez67@yahoo.es">
-      <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required>
+  <!-- Hero Section -->
+  <header>
+    <h1>Encuentra Tu Piso Ideal</h1>
+    <p>Descubre precios, barrios recomendados y habla con nuestro asistente en segundos.</p>
+    <div class="hero-buttons">
+      <a class="btn-primary" href="https://chatgpt.com/g/g-61MfaRZB-global-apartment-finder-ai-powered" target="_blank" rel="noopener">Probar Asistente</a>
+      <a class="btn-secondary" href="#contacto">Contacto</a>
+    </div>
+  </header>
+
+  <!-- Qué es -->
+  <section id="que-es">
+    <h2>¿Qué hace nuestro asistente?</h2>
+    <p>Utiliza inteligencia artificial para responder dudas sobre precios de alquiler, barrios seguros, comparativas de compra y alquiler, y te conecta con agencias de confianza. Todo ello en tiempo real y disponible 24/7.</p>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios">
+    <h2>Testimonios</h2>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <p>"Gracias al asistente encontré un piso ideal en menos de una semana. Me recomendó barrios que no conocía."</p>
+        <span>— Laura G., Madrid</span>
       </div>
-      <div class="form-group">
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" required>
+      <div class="testimonial-card">
+        <p>"Las comparaciones de precios y la información sobre barrios me ayudaron a negociar un alquiler más justo."</p>
+        <span>— Carlos M., Barcelona</span>
       </div>
-      <div class="form-group">
-        <label for="presupuesto">Presupuesto mensual (€)</label>
-        <input type="number" id="presupuesto" name="presupuesto" min="0" step="50" required>
+      <div class="testimonial-card">
+        <p>"Como extranjera en Lyon, el asistente me guió sobre los requisitos y me puso en contacto con una agencia."</p>
+        <span>— Sofia L., Lyon</span>
       </div>
-      <div class="form-group">
-        <label for="mensaje">Ciudad o barrio de interés</label>
-        <textarea id="mensaje" name="mensaje" rows="3" placeholder="Ej. Madrid, Barcelona, Lyon" required></textarea>
+    </div>
+  </section>
+
+  <!-- Preguntas frecuentes -->
+  <section id="faq">
+    <h2>Preguntas frecuentes</h2>
+    <details class="faq-item">
+      <summary>¿Es gratis usar el asistente?</summary>
+      <div>Sí. Puedes realizar todas las consultas que necesites sin ningún coste.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Cuán actualizados están los datos de precios?</summary>
+      <div>La información se actualiza con fuentes de confianza para que siempre dispongas de datos recientes sobre alquiler y vivienda.</div>
+    </details>
+    <details class="faq-item">
+      <summary>¿Cómo gestionan mis datos?</summary>
+      <div>Solo utilizamos tus datos de contacto para trasladarlos a agencias inmobiliarias de confianza. Nunca serán compartidos con terceros sin tu consentimiento.</div>
+    </details>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog">
+    <h2>Blog y recursos</h2>
+    <div class="blog-list">
+      <div class="blog-item">
+        <a href="precios-alquiler-madrid-2025.html">Precios de alquiler en Madrid 2025</a>
       </div>
-      <button type="submit">Enviar datos</button>
-    </form>
-  </div>
-</section>
-<section id="testimonios">
-  <h2>Testimonios</h2>
-  <div class="testimonials">
-    <blockquote>
-      <p>"Encontré un piso en Barcelona en menos de una semana. El asistente me ahorró horas de búsqueda."</p>
-      <footer>— Laura, Barcelona</footer>
-    </blockquote>
-    <blockquote>
-      <p>"Gracias a la IA, supe qué barrios eran seguros para mi familia y ajustados a nuestro presupuesto."</p>
-      <footer>— Miguel, Valencia</footer>
-    </blockquote>
-    <blockquote>
-      <p>"Muy práctico y directo. Recibí contacto de varias agencias de confianza en poco tiempo."</p>
-      <footer>— Sophie, Lyon</footer>
-    </blockquote>
-  </div>
-</section>
-<section id="faq">
-  <h2>Preguntas Frecuentes</h2>
-  <details>
-    <summary>¿Cómo obtienen los datos de alquileres?</summary>
-    <p>Usamos fuentes públicas y colaboramos con agencias para ofrecer información actualizada y precisa.</p>
-  </details>
-  <details>
-    <summary>¿Tiene algún coste usar el asistente?</summary>
-    <p>Consultar precios y barrios es gratuito. Solo pagas si contratas servicios de agencias recomendadas.</p>
-  </details>
-  <details>
-    <summary>¿Puedo solicitar pisos en ciudades fuera de España y Francia?</summary>
-    <p>De momento nuestro asistente está optimizado para España y Francia, pero pronto añadiremos más países.</p>
-  </details>
-</section>
-<section id="blog">
-  <h2>Últimos artículos del blog</h2>
-  <ul class="blog-list">
-      <li><a href="precios-alquiler-madrid-2025.html" title="Precios de alquiler en Madrid 2025">Precios de alquiler en Madrid 2025</a></li>
-  <li><a href="#" title="Guía de barrios seguros en Barcelona">Guía de barrios seguros en Barcelona</a></li>
-  <li><a href="#" title="Consejos para negociar tu alquiler">Consejos para negociar tu alquiler</a></li>
-  </ul>
-  <p><a href="#" class="btn-secondary">Ver más artículos</a></p>
-</section>
-<footer>
-  &copy; 2025 Alendris Hernández • Asistente Inmobiliario IA
-</footer>
+      <div class="blog-item">
+        <a href="alquiler-vs-compra-2025.html">Alquiler vs compra en 2025</a>
+      </div>
+      <div class="blog-item">
+        <a href="consejos-negociar-alquiler-2025.html">Consejos para negociar tu alquiler 2025</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de contacto -->
+  <section id="contacto">
+    <h2>Recibe ofertas y ayuda personalizada</h2>
+    <p>Déjanos tus datos y una agencia inmobiliaria se pondrá en contacto contigo con opciones ajustadas a tu presupuesto.</p>
+    <div class="form-container">
+      <form method="post" action="https://formsubmit.co/antonrodriguez67@yahoo.es">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="presupuesto">Presupuesto mensual (€)</label>
+          <input type="number" id="presupuesto" name="presupuesto" min="0" step="50" required>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Ciudad o barrio de interés</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="Ej. Madrid, Barcelona, Lyon" required></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit">Enviar datos</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Alendris Hernández • Asistente Inmobiliario IA</p>
+  </footer>
 </body>
 </html>
